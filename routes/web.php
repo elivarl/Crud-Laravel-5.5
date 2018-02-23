@@ -12,3 +12,4 @@
 */
 
 Route::resource('libro', 'LibroController');
+Route::get('api/v1/libros','LibroController@getLibros');

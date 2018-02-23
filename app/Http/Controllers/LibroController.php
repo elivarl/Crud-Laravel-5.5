@@ -97,4 +97,16 @@ class LibroController extends Controller
          Libro::find($id)->delete();
         return redirect()->route('libro.index')->with('success','Registro eliminado satisfactoriamente');
     }
+
+
+    /**
+     * Ejemplo de método REST 
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function getLibros(){
+        $libros=Libro::all();
+        return response()->json($libros);
+    }
 }
